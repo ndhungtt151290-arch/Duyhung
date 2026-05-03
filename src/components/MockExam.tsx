@@ -19,10 +19,9 @@ import QuestionNav from './QuestionNav';
 interface MockExamProps {
   questions: ExamQuestion[];
   onExit: () => void;
-  imageModules: Record<string, { default: string }>;
 }
 
-export default function MockExam({ questions, onExit, imageModules }: MockExamProps) {
+export default function MockExam({ questions, onExit }: MockExamProps) {
   const { t, language } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, '○' | '×' | null>>({});
@@ -253,7 +252,7 @@ export default function MockExam({ questions, onExit, imageModules }: MockExamPr
                 {currentQuestion.image && (
                   <div className="relative group shrink-0">
                     <img 
-                      src={imageModules[`/src/uploads/image/${currentQuestion.image}`]?.default} 
+                      src={`/image/${currentQuestion.image}`} 
                       alt="Situation" 
                       className="w-full h-24 object-contain bg-neutral-50 rounded-xl shadow-sm" 
                     />
@@ -305,7 +304,7 @@ export default function MockExam({ questions, onExit, imageModules }: MockExamPr
                 {currentQuestion.image && (
                   <div className="relative group shrink-0">
                     <img 
-                      src={imageModules[`/src/uploads/image/${currentQuestion.image}`]?.default} 
+                      src={`/image/${currentQuestion.image}`} 
                       alt="Question visual" 
                       className="w-full h-32 object-contain bg-neutral-50 rounded-xl shadow-sm" 
                     />

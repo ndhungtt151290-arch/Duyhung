@@ -17,9 +17,6 @@ import MockExam from './components/MockExam';
 import QuestionNav from './components/QuestionNav';
 import { generateExam } from './utils/examUtils';
 
-// Import all images
-const imageModules = import.meta.glob<{ default: string }>('/src/uploads/image/*.png', { eager: true });
-
 export default function App() {
   const { t, language, toggleLanguage } = useLanguage();
   const [view, setView] = useState<'home' | 'practice' | 'exam'>('home');
@@ -72,8 +69,7 @@ export default function App() {
   };
 
   // Find the image for the current question
-  const imagePath = question?.image ? `/src/uploads/image/${question.image}` : null;
-  const foundImage = imagePath ? imageModules[imagePath]?.default : null;
+  const foundImage = question?.image ? `/image/${question.image}` : null;
 
   return (
     <div 
@@ -367,7 +363,6 @@ export default function App() {
               <MockExam 
                 questions={examQuestions} 
                 onExit={() => setView('home')} 
-                imageModules={imageModules}
               />
             </motion.div>
           )}
