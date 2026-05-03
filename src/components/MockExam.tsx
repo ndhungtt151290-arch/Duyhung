@@ -252,7 +252,7 @@ export default function MockExam({ questions, onExit }: MockExamProps) {
                 {currentQuestion.image && (
                   <div className="relative group shrink-0">
                     <img 
-                      src={`/image/${currentQuestion.image}`}
+                      src={`/images/${currentQuestion.image}`}
                       alt="Situation" 
                       className="w-full h-24 object-contain bg-neutral-50 rounded-xl shadow-sm" 
                     />
@@ -304,7 +304,7 @@ export default function MockExam({ questions, onExit }: MockExamProps) {
                 {currentQuestion.image && (
                   <div className="relative group shrink-0">
                     <img 
-                      src={`/image/${currentQuestion.image}`}
+                      src={`/images/${currentQuestion.image}`}
                       alt="Question visual" 
                       className="w-full h-32 object-contain bg-neutral-50 rounded-xl shadow-sm" 
                     />

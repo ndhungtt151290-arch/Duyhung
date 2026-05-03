@@ -71,7 +71,7 @@ export default function App() {
   };
 
   // Find the image for the current question
-  const foundImage = question?.image ? `/image/${question.image}` : null;
+  const foundImage = question?.image ? `/images/${question.image}` : null;
 
   return (
     <div 
