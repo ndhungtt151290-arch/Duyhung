@@ -77,7 +77,7 @@ export default function App() {
     <div 
       className={`min-h-screen font-sans text-neutral-900 selection:bg-red-100 selection:text-red-700 relative transition-all duration-700 flex flex-col ${view === 'home' ? 'bg-white' : 'bg-neutral-50'}`}
       style={{ 
-        backgroundImage: view === 'home' ? 'url("/bgh.jpg")' : 'url("/q9.png")',
+        backgroundImage: view === 'home' ? 'url("/bgh.jpg")' : 'url("/images/q9.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -215,7 +215,7 @@ export default function App() {
               />
 
               {/* Question Card */}
-              <div className="bg-white rounded-3xl p-5 shadow-xl border border-neutral-100 flex flex-col gap-4 flex-1 min-h-0 overflow-auto" style={{ marginLeft: '0px', width: '343px' }}>
+              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-5 shadow-xl border border-white/50 flex flex-col gap-4 flex-1 min-h-0 overflow-auto" style={{ marginLeft: '0px', width: '343px' }}>
                 {foundImage && (
                   <div className="relative group shrink-0" style={{ paddingTop: '10px', marginLeft: '0px', height: '92px', width: '302px', marginTop: '-11px', paddingLeft: '0px' }}>
                     <img 

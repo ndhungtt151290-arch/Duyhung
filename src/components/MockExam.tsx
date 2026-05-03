@@ -237,7 +237,7 @@ export default function MockExam({ questions, onExit }: MockExamProps) {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -20 }}
           transition={{ duration: 0.2 }}
-          className="bg-white rounded-3xl p-4 shadow-lg border border-neutral-100 flex-1 flex flex-col min-h-0 space-y-4 overflow-hidden"
+          className="bg-white/90 backdrop-blur-sm rounded-3xl p-4 shadow-lg border border-white/50 flex-1 flex flex-col min-h-0 space-y-4 overflow-hidden"
         >
           <div className="flex justify-between items-center shrink-0">
             <span className="bg-red-50 text-red-600 px-2 py-0.5 rounded-full text-[0.5rem] font-black uppercase tracking-widest">
